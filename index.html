@@ -29,7 +29,7 @@
 		<div class="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="#" class="branding">
+					<a href="index.html" class="branding">
 						<img src="images/sem.jpeg" width="10%" alt="" class="logo">
 						<h1 class="site-title">The True Church</h1>
 					</a>
@@ -265,20 +265,23 @@
 						<div class="col-md-4">
 							<div class="widget">
 								<h3 class="widget-title">Contact form</h3>
-								<form method="post" action="contact-form.php" class="contact-form">
-									<div class="row">
-										<div class="col-md-6"><input id="form_name" name="fullName" type="text" placeholder="Your name..."></div>
-										<div class="col-md-6"><input id="form_email" name="email" type="text" placeholder="Email..."></div>
-										<div class="col-md-6"><input id="form_subject" name="subject" type="text" placeholder="subject"></div>
-									</div>
-									
-									<textarea name="" id="form_message" placeholder="Your message..."></textarea>
-									<div class="text-right"><button type="submit" name="submit">SEND MAIL</div>
-									
-								</form>
+								        <form method="POST">
+												<label for="form_name">Your Name: </label> 
+												<input type="text" id="form_name"><br><br>
+											
+												<label for="form_subject"> Your Subject </label>
+												<input type="text" id="form_subject"><br><br>
+											
+												<label for="form_email"> Your Email </label>
+												<input type="email" id="form_email"><br><br>
+											
+											<label > Your message </label>
+											<textarea placeholder="Type message" id="form_message"></textarea> <br><br>
+											
+											<button onclick="ssmPOST();" type="submit">Send</button>
+										</form> 
 							</div>
 						</div>
-						 <script src="https://apitechcompany.herokuapp.com/api/js-contact-form-integration-file/<Benedict>"></script> 
 					</div> <!-- .row -->
 
 					<center class="colophon">Copyright &copy; 2021  All right reserved, powered by Osei Sefa Benedict.</center>
@@ -291,6 +294,7 @@
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
+		<script src="contact.js"></script>
 		
 	</body>
 
